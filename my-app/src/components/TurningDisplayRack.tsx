@@ -33,9 +33,9 @@ const TurningDisplayRack: React.FC = () => {
 
   return (
     <div className="turning-display-rack-container">
-      <div className="prev-button-container">
+      {/* <div className="prev-button-container"> */}
         <button className="prev-button" onClick={prevOption}>Previous</button>
-      </div>
+      {/* </div> */}
       <div className="turning-display-rack">
         <div className="rack">
           {options.map((option, index) => (
@@ -59,9 +59,9 @@ const TurningDisplayRack: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="next-button-container">
+      {/* <div className="next-button-container"> */}
         <button className="next-button" onClick={nextOption}>Next</button>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

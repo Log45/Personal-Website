@@ -1,18 +1,27 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TurningDisplayRack from './components/TurningDisplayRack';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Resume from './components/Resume';
+//import About from './components/About';
+//import Contact from './components/Contact';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      <TurningDisplayRack />
-      </header>
-      
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/resume" Component={Resume} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
+
+export default App;
+
 
 
 
@@ -41,4 +50,4 @@ function App() {
 //   );
 // }
 
-export default App;
+//export default App;
