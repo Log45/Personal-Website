@@ -1,26 +1,32 @@
-.Navbar{
-  background-color: #373c47 !important;
-  /* display:inline; */
-  font-size: calc(10px + 2vmin);
-  padding:10px
-}
-
-nav ul {
-    list-style-type: none; /* Remove default list styling */
+.Navbar {
+    background-color: #131518; /* Base color of the navbar */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    font-size: calc(10px + 2vmin);
+  }
+  
+  .navbar-list {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Use flexbox layout */
+    display: flex; /* Ensure horizontal layout */
   }
   
-  nav ul li {
-    margin-right: 10px; /* Add some spacing between list items */
+  .navbar-list li {
+    margin-right: 20px;
   }
   
-  nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
+  .navbar-list li:last-child {
+    margin-right: 0;
   }
   
-  nav ul li a {
-    text-decoration: none; /* Remove default link underline */
-    color: white; /* Change link color */
+  .navbar-list li a {
+    text-decoration: none;
+    color: white;
   }
+  
+  .navbar-list li a:hover {
+    color: #61dafb; /* Change link color on hover */
+  }
+  
