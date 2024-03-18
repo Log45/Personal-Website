@@ -1,9 +1,39 @@
+
+/* over 1000px width*/
+@media screen and (min-width: 1000px) {
+  .Description {
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  .Description img {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .Description .Content {
+    padding: 0px 30px 0px 15px;
+    width: calc(90% - 400px);
+  }
+}
+
+/* under 1000px width*/
+@media screen and (max-width: 1000px) {
+  .Description {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Description .Content {
+    padding: 0px 30px;
+  }
+}
+
 .Home {
     text-align: center;
     background-color: #282c34;
     /* min-height: 100vh; */
     display: flex;
-    flex-direction: column;
     align-items: center; 
     justify-content: center; 
     font-size: calc(10px + 2vmin);
@@ -20,10 +50,13 @@
     /* justify-content: center;  */
     font-size: calc(10px + 2vmin);
     color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    padding-bottom: 1rem;
 }
 
-.Description p {
-    flex: 1; /* Let the paragraph expand to fill the remaining space */
+.Description .Content p {
     margin: 0; /* Reset margin */
     padding: 0; /* Reset padding */
   }
@@ -31,8 +64,10 @@
 .Description img {
     flex: 0 0 auto; /* Let the image shrink or grow as needed */
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    margin: 0; /* Reset margin */
+    margin: 15px; /* Reset margin */
     padding: 0; /* Reset padding */
     margin-right: 20px; /* Add some space between the image and paragraph */
+    max-height: 60vmin;
+    max-width: 60vmin;
   }
   
