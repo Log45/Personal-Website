@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+
+% Page Structure
+\usepackage{geometry}
+\geometry{
+	top=.5in,
+	left=1.25in,
+	right=.5in,
+	bottom=.5in,
+}
+\usepackage{changepage} % Will use later to adjust lengths
+
+\newlength{\marginlen}
+\newlength{\marginsep}
+\newlength{\barlen}
+\setlength{\marginlen}{0.75in}
+\setlength{\marginsep}{0.05in}
+
+\addtolength{\barlen}{\marginlen}
+\addtolength{\barlen}{-\marginsep}
+
+
+\usepackage{titlesec}
+\titleformat{\section}%
+	{\Large}% size
+	{}% label format. empty
+	{0pt}% space after label.
+	{% This is the big bar
+		\color{\accentcolor}%
+		\hspace*{-\marginlen}%
+		\raise0.25ex\hbox{\rule{\barlen}{1ex}}\hspace{\marginsep}%
+	}
+\setcounter{secnumdepth}{0} % turn off section numbering 
+\titlespacing*{\section}{0pt}{1.0ex}{1.0ex} % keep 0, vertical space above, vertical space below.
+
+\pagestyle{empty} % no page numbering
+
+
+% Font
+\usepackage{ebgaramond}
+%\usepackage{libertine}
+%\usepackage{ETbb}
+%\usepackage{cochineal}
+
+
+\usepackage{enumitem}
+\setlist[itemize]{
+	left=0pt,
+	nosep,
+	before=\small,
+	after=\normalsize,
+	topsep=2pt,
+}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks, allcolors=black}
+
+\makeatletter
+\newcommand{\email}[1]{\gdef\@email{#1}}
+\newcommand{\linkedin}[1]{\gdef\@linkedin{#1}}
+\newcommand{\github}[1]{\gdef\@github{#1}}
+
+\renewcommand{\maketitle}{
+    \begin{adjustwidth}{-\marginlen}{0pt}
+        \begin{tabular}{@{} p{0.5\linewidth} @{} p{0.5\linewidth} @{} }
+        {
+            \fontsize{42}{72}\selectfont \@title
+        }
+        &    
+        \hypersetup{allcolors=\accentcolor}
+        \parbox{\linewidth}{%
+            \raggedleft\large%
+            \href{\@email}{\@email}\par%
+            \href{\@linkedin}{\@linkedin}\par%
+            \href{\@github}{\@github}%
+        }
+        \end{tabular}
+    
+        \bigskip
+    \end{adjustwidth}
+}
+
+\makeatother
+
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\accentcolor}{blue!50!black!100!white}
+
+\title{Logan Endes}
+\email{logan-endes@mail.rit.edu}
+\linkedin{in/logan-endes}
+\github{github.com/log45}
+
+\reversemarginpar
+
+\newcommand{\mpar}[1]{\leavevmode\marginpar{\raggedleft #1}}
+\begin{document}
+\maketitle
+
+%\section{Objective}
+%Motivated undergraduate student looking to apply for Computer Science and AI/ML Internships during the Summer of 2025 available to start after May 10th, 2025. 
+
+\section{Experience}
+
+\mpar{Jan 2024 --\par Aug 2024}
+\textbf{AI Software Engineering Co-op}, \emph{Ecolab AI Accelerator Team}, Saint Paul, MN
+\begin{itemize}
+
+    \item Pioneered the use of \textbf{Computer Vision} AI to increase the efficiency of kitchens with an estimated \textbf{10x return on investment.}
+    \item Maintained a \textbf{Large Language Model}-powered Copilot used by technicians and employees across the entirety of Ecolab. 
+    \item Collaborated with engineers from Microsoft as part of Ecolab's new AI Accelerator Team.
+    
+    %\item Integrate AI solutions into Ecolab's system etc. 
+\end{itemize}
+\smallskip
+
+\mpar{Aug 2023 --\par Dec 2023}
+\textbf{Student Lab Instructor}, \emph{RIT Department of Computer Science}, Rochester, NY
+\begin{itemize}
+    \item Aided students through a lab section each week in learning Computer Science concepts and applying them to different problems using \textbf{Python}.
+    \item Tutored students in \textbf{Python} and \textbf{Java} problems in the CS tutoring center each week. 
+\end{itemize}
+\smallskip
+
+\mpar{June 2023 --\par Aug 2023}
+\textbf{AI Research Intern}, \emph{Brookhaven National Laboratory}, Upton, NY
+\begin{itemize}
+        \item Researched the use of \textbf{prompt engineering Large Language Models} to make the process of researching medical isotopes more efficient using \textbf{PyTorch} and \textbf{Hugging Face's Transformers} library. 
+        \item Found that models like LLAMA-2 were able to discern elements necessary in chemical separations, but that more research must be done for discerning specific isotopes needed.
+	
+\end{itemize}
+
+% \smallskip
+
+% \mpar{Mar 2022 --\par June 2022}
+% \textbf{Volunteer}, \emph{"Blueberry" Research Project}, Rowan University
+% \begin{itemize}
+% 	\item Worked with Professor Nguyen of Rowan University to help develop a program that automates drones to take pictures of blueberry fields and estimate the yield.
+% \end{itemize}
+
+\section{Projects}
+
+%\mpar{Date -- \par Present}
+\textbf{Fencing Judge AI, \href{https://github.com/log45/Fencing-Judge-AI}{log45/Fencing-Judge-AI}}, \emph{Personal Project}
+\begin{itemize}
+	\item Researching the best \textbf{PyTorch} classification model for CV of live-video feed and training an AI model to accurately score Saber fencing bouts.
+\end{itemize}
+
+\smallskip
+
+%\mpar{Nov 2021 - Present}
+\textbf{AI Notetaker,
+\href{https://github.com/log45/Notetaker}{log45/Notetaker}}, \emph{Personal Project}
+\begin{itemize}
+	\item Developing a web application to transcribe recordings into  and create notes with a large language model. 
+\end{itemize}
+
+\smallskip
+\textbf{Keyboard Design, \href{https://github.com/log45/keyboard-design}{log45/keyboard-design},} \emph{Personal Project}
+\begin{itemize}
+    \item Designed a keyboard PCB using KiCad to be hot-swappable and programmable powered by a Raspberry Pi Pico.
+\end{itemize}
+
+%\smallskip
+%\textbf{Alarm Clock Game, \href{https://github.com/log45/Alarm-Clock-Game}{log45/Alarm-Clock-Game},} \emph{Personal Project}
+%\begin{itemize}
+   % \item Developed a "Simon-Says" game that prompts the user to press highlighted squares in order to turn off an alarm.
+%\end{itemize}
+
+
+\section{Skills}
+
+\mpar{Languages} Python, Java, LaTeX, C\#/ASP.NET, SQL, C/C++, Assembly
+\smallskip
+
+\mpar{Libraries} Tkinter, Transformers, PyTorch,  NumPy, OpenAI, Ultralytics, Supervision
+\smallskip
+
+%\mpar{Frameworks} React, Vue, Node.js	
+%\smallskip
+
+\mpar{Tools} VSCode, JetBrains IDEs, Anaconda, Git, KiCad
+\smallskip
+
+\mpar{Fluencies} English (Native), Japanese (Beginner)
+
+\section{Education}
+\textbf{Rochester Institute of Technology,} Rochester, NY\newline 
+\textbf{B.S./M.S. Computer Science}\\
+\textbf{B.S. Japanese Language and Culture}
+
+Expected graduation: May 2026 B.S. / May 2027 M.S. \\
+Dean's List: Fall 2022, Spring 2023, Fall 2023, Presidential Scholar, Performing Arts Scholar
+
+\section{Extracurriculars \& Leadership}
+
+\mpar{Aug 2022 -- \par Present}
+\textbf{Member}, \emph{RIT Computer Science House}
+\begin{itemize}
+	\item Living in a learning community emphasizing hands-on learning and a strong social atmosphere while participating in member-led seminars and meeting a major project requirement.
+\end{itemize}
+
+\smallskip
+
+\mpar{Aug 2022 -- \par Present}
+\textbf{Member}, \emph{RIT Fencing Club}
+\begin{itemize}
+    \item Participating in weekly fencing practices and open-bouting sessions, fencing saber.
+\end{itemize}
+
+\smallskip
+
+\mpar{June 2017 -- \par Jan 2022}
+\textbf{Drum Major, Brass Captain, Member,} \emph{Pennsauken Apache Marching Band}
+\begin{itemize}
+    \item Developed skills in teamwork, discipline, and leadership while playing as part of a close-knit ensemble, leading rehearsals, and \\instructing students in marching technique.
+\end{itemize}
+
+\smallskip
+
+\mpar{June 2021}
+\textbf{State Assemblyman,} \emph{American Legion Jersey Boys State}
+\begin{itemize}
+    \item Simulated the creation of a 51st state with 500 student leaders from across New Jersey in order to solve problems in respective cities to learn the importance of discipline, respect, teamwork, and the political process.
+\end{itemize}
+\end{document}

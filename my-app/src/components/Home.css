@@ -1,11 +1,38 @@
 .Home {
     text-align: center;
     background-color: #282c34;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+.Description{
+    text-align: left;
+    background-color: #282c34;
+    /* min-height: 100vh; */
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center;  */
+    /* justify-content: center;  */
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Description p {
+    flex: 1; /* Let the paragraph expand to fill the remaining space */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+  }
+
+.Description img {
+    flex: 0 0 auto; /* Let the image shrink or grow as needed */
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    margin-right: 20px; /* Add some space between the image and paragraph */
+  }
+  

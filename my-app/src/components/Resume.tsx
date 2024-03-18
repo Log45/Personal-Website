@@ -1,4 +1,5 @@
 // Resume.tsx
+// This is unused
 
 import React from 'react';
 import Navbar from './Navbar'

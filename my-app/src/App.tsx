@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Resume from './components/Resume';
+import Contact from './components/Contact';
 //import About from './components/About';
 //import Contact from './components/Contact';
 
@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <div>
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/resume" Component={Resume} />
+          <Route path="/contact" Component={Contact} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
