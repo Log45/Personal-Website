@@ -34,16 +34,20 @@ RUN npm run build
 # RUN pdflatex --interaction=nonstopmode main.tex
 
 # Stage 3: Combine both stages into a final image
+
 FROM nginxinc/nginx-unprivileged:stable-alpine
 
 # Remove the user directive from the nginx configuration
 RUN sed -i '/^user/d' /etc/nginx/nginx.conf
 
-# Set the working directory in the container
-WORKDIR /usr/share/nginx/html
-
-# Copy the built React app from the react-build stage
-COPY --from=react-build /app/build ./ 
+# Copy the built React app to Nginx's web server directory
+COPY --from=react-build /app/build /usr/share/nginx/html
 
 # Copy the PDF file from the latex-build stage to the public directory
 #COPY --from=latex-build /usr/src/app/main.pdf ./public/resume.pdf
+
+# Expose port 8080 for the Nginx server
+EXPOSE 8080
+
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]
