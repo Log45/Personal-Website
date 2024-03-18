@@ -17,21 +17,21 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Build the LaTeX file
-FROM docker.io/debian:bullseye AS latex-build
+# FROM docker.io/debian:bullseye AS latex-build
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       texlive-latex-extra \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update \
+#     && apt-get install -y --no-install-recommends \
+#        texlive-latex-extra \
+#     && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# # Set the working directory in the container
+# WORKDIR /usr/src/app
 
-# Copy LaTeX files into the container
-COPY latex ./
+# # Copy LaTeX files into the container
+# COPY latex ./
 
-# Compile the LaTeX file into a PDF
-RUN pdflatex --interaction=nonstopmode main.tex
+# # Compile the LaTeX file into a PDF
+# RUN pdflatex --interaction=nonstopmode main.tex
 
 # Stage 3: Combine both stages into a final image
 FROM nginx:alpine
@@ -43,4 +43,4 @@ WORKDIR /usr/share/nginx/html
 COPY --from=react-build /app/build ./ 
 
 # Copy the PDF file from the latex-build stage to the public directory
-COPY --from=latex-build /usr/src/app/main.pdf ./public/resume.pdf
+#COPY --from=latex-build /usr/src/app/main.pdf ./public/resume.pdf
