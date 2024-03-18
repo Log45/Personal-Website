@@ -14,11 +14,7 @@
   }
   
   .navbar-list li {
-    margin-right: 20px;
-  }
-  
-  .navbar-list li:last-child {
-    margin-right: 0;
+    margin-left: 20px;
   }
   
   .navbar-list li a {
