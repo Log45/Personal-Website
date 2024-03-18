@@ -37,7 +37,7 @@ RUN npm run build
 FROM nginxinc/nginx-unprivileged:stable-alpine
 
 # Remove the user directive from the nginx configuration
-RUN sed -i '/^user/d' /etc/nginx/nginx.conf
+# RUN sed -i '/^user/d' /etc/nginx/nginx.conf
 
 # Set the working directory in the container
 WORKDIR /usr/share/nginx/html
