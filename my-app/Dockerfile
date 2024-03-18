@@ -34,7 +34,10 @@ RUN npm run build
 # RUN pdflatex --interaction=nonstopmode main.tex
 
 # Stage 3: Combine both stages into a final image
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged:stable-alpine
+
+# Remove the user directive from the nginx configuration
+RUN sed -i '/^user/d' /etc/nginx/nginx.conf
 
 # Set the working directory in the container
 WORKDIR /usr/share/nginx/html
