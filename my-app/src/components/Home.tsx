@@ -25,8 +25,8 @@ const Home: React.FC = () => {
             and Machine Learning.
             <br></br>
             <br></br>
-            Currently, I'm working as a Software Engineering Intern at Ecolab collaborating with Microsoft engineers to bring AI assistants to
-            the restaurant industry with the help of insights from computer vision applications. 
+            Currently, I'm working as a Software Engineering Intern at Ecolab collaborating with senior engineers to bring AI assistants to
+            untapped industries. 
             <br></br>
             <br></br>
             During the Summer of 2023, I was part of the Science Undergratuate Laboratory Internship program at Brookhaven National Laboratory (BNL). 
