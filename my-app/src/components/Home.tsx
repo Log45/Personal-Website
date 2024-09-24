@@ -20,12 +20,12 @@ const Home: React.FC = () => {
     <div className='Description'>
       <img src={selfPortraint} alt="Headshot of Logan Endes" width={600} height={600}/>
       <div className='Content'>
-        <p>I'm a third year student at Rochester Institute of Technology studying Computer Science as well as Japanese Language and Culture. 
-            Next year, I will begin taking graduate courses as part of RIT's Accelerated Master's program, focusing in Artificial Intelligence 
-            and Machine Learning.
+        <p>I'm a third year student at Rochester Institute of Technology majoring in Computer Science with a Minor in Japanese Language and Culture. 
+          This year, I am beginning my Master's in Computer Science with a focus on Artificial Intelligence and Machine Learning.
+            
             <br></br>
             <br></br>
-            Currently, I'm working as a Software Engineering Intern at Ecolab collaborating with senior engineers to bring AI assistants to
+            Currently, I'm working part-time as a Software Engineer at Ecolab collaborating with senior engineers to bring AI assistants to
             untapped industries. 
             <br></br>
             <br></br>
