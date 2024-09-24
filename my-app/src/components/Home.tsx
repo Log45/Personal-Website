@@ -25,8 +25,7 @@ const Home: React.FC = () => {
             
             <br></br>
             <br></br>
-            Currently, I'm working part-time as a Software Engineer at Ecolab collaborating with senior engineers to bring AI assistants to
-            untapped industries. 
+            Currently, I'm working as a Part-Time AI Software Engineer at Ecolab collaborating with senior engineers to bring AI assistants to untapped industries. 
             <br></br>
             <br></br>
             During the Summer of 2023, I was part of the Science Undergratuate Laboratory Internship program at Brookhaven National Laboratory (BNL). 
