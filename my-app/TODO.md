@@ -62,11 +62,27 @@ Education:
     - Rowan College at Burlington County
     - Machine and Assembler Language Programming
     - Intermediate Student Research: Neural Networks
-- Fall 2024: TBD
+- Fall 2024: 3.56
     - Rochester Institute of Technology
-    - TBD GPA
+    - 3.27 Term GPA
     - Analysis of Algorithms
     - Introduction to Artificial Intelligence
+    - Introduction to Machine Learning*
     - Intermediate Japanese 1
-    - Samurai in Word and Image
+    - Practical Writing and Speaking in Japanese
+- Spring 2025: 3.58
+    - Rochester Institute of Technology
+    - 3.67 Term GPA
+    - Neural Networks and Machine Learning*
+    - Large Language Models
+    - Concepts of Parallel and Distributed Systems
+    - Intermediate Japanese 2
+    - Practical Reading and Speaking in Japanese
+- Summer 2025: TBD
+    - Rochester Institute of Technology
+    - TBD Term GPA
+    - Introduction to Big Data*
+    - Programming Language Concepts
+    - Professional Communications
 
+`*` - Graduate Course
