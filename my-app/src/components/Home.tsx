@@ -20,12 +20,11 @@ const Home: React.FC = () => {
     <div className='Description'>
       <img src={selfPortraint} alt="Headshot of Logan Endes" width={600} height={600}/>
       <div className='Content'>
-        <p>I'm a third year student at Rochester Institute of Technology majoring in Computer Science with a Minor in Japanese Language and Culture. 
-          This year, I am beginning my Master's in Computer Science with a focus on Artificial Intelligence and Machine Learning.
-            
+        <p>I'm a fourth year student at Rochester Institute of Technology pursuing a Bachelors and Masters Degree in Computer Science focused in Artificial Intelligence, and a Minor in Japanese Language. 
             <br></br>
             <br></br>
-            Currently, I'm working as a Part-Time AI Software Engineer at Ecolab collaborating with senior engineers to bring AI assistants to untapped industries. 
+            Last school year, I worked part time as an AI Software Engineer at Ecolab collaborating with senior engineers to bring AI assistants to customers in the restaurant industry. Before returning to school for the Fall 2024 semester, 
+            I interned with Ecolab full time starting in January 2024. During my time there, I fine-tuned YOLO object detection models to detect food items in footage from kitchens. 
             <br></br>
             <br></br>
             During the Summer of 2023, I was part of the Science Undergratuate Laboratory Internship program at Brookhaven National Laboratory (BNL). 
