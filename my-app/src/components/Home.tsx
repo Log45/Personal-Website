@@ -82,6 +82,31 @@ const Home: React.FC = () => {
                 a valuable asset in automatic isotope suggestion and production for the future of cancer treatment. 
             </p>
           </Dropdown>
+          <Dropdown title="Skills" minHeight={imgSize ? imgSize.height : undefined}>
+          <p>Programming Languages:
+          <ul>
+            <li>Intermediate/Advanced: Python</li>
+            <li>Proficient: Java, C++, C#</li>
+            <li>Fundamentals: LaTeX, Typescript, Go, HTML, CSS, SQL, Assembly, Bash</li>
+          </ul>
+          
+          Frameworks/Libraries:
+          <ul>
+            <li>Proficient: PyTorch, Numpy, HuggingFace Transformers, OpenCV, Tkinter, Supervision, Ultralytics, OpenAI</li>
+            <li>Fundamentals: React, Angular</li>
+          </ul>
+          Tools: GitHub, Azure, Azure Machine Learning, Azure DevOps, Jira, JetBrains IDEs, Visual Studio Code, Jupyter Notebooks, Anaconda, Docker, KiCAD
+          <br></br>
+          <br></br>
+          Spoken Fluencies: 
+          <ul>
+            <li>English: Native</li>
+            <li>Japanese: Intermediate</li>
+          </ul>
+          </p>
+          </Dropdown>
+
+          
         </div>
       </div>
     </div>
