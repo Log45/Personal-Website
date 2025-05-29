@@ -6,7 +6,7 @@ import './Home.css';
 const experiences = [
   {
     title: "Part-time AI Engineer at Ecolab",
-    duration: "August 2024-March 2025",
+    duration: "August 2024 - March 2025",
     description: "Fine-tuned YOLO object detection models to detect food items in kitchen footage.",
     contributions: []
   },
@@ -18,14 +18,20 @@ const experiences = [
   },
   {
     title: "Student Laboratory Instructor at Rochester Institute of Technology",
-    duration: "Summer 2023",
+    duration: "August 2023 - December 2023",
     description: "Aided students during Computer Science 1 lab periods.",
     contributions: []
   },
   {
     title: "AI Research Intern at Brookhaven National Laboratory",
-    duration: "Summer 2023",
+    duration: "June 2023 - August 2023",
     description: "Researched the use of Large Language AI Models (LLMs) for medical isotope development.",
+    contributions: []
+  },
+  {
+    title: "Customer Service Associate at Wawa",
+    duration: "June 2020 - March 2023",
+    description: "Created custom sandwiches and drinks in the deli, operated the cash register, and assisted customers.",
     contributions: []
   },
   
