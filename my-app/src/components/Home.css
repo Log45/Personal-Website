@@ -1,5 +1,4 @@
-
-/* over 1000px width*/
+/* over 1000px width */
 @media screen and (min-width: 1000px) {
   .Description {
     flex-direction: row;
@@ -24,8 +23,20 @@
     align-items: center;
   }
   
+  /* .Description .Content {
+    padding: 0px 30px;
+    width: 100%;
+    max-width: 98vw;
+  } */
+
   .Description .Content {
     padding: 0px 30px;
+    width: 100%;
+    max-width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -62,12 +73,81 @@
   }
 
 .Description img {
-    flex: 0 0 auto; /* Let the image shrink or grow as needed */
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    margin: 15px; /* Reset margin */
-    padding: 0; /* Reset padding */
-    margin-right: 20px; /* Add some space between the image and paragraph */
-    max-height: 60vmin;
-    max-width: 60vmin;
-  }
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 15px;
+  padding: 0;
+  margin-right: 10px;
+  max-width: 60vw;
+  max-height: 60vh;
+}
   
+.Description .Content {
+  padding: 0px 30px 0px 15px;
+  width: 100%;
+  max-width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered-section {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.centered-section h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  .centered-section {
+    max-width: 98vw;
+  }
+}
+
+.Content.centered-content {
+  width: 100%;
+  max-width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Responsive font size for dropdowns */
+.dropdown-toggle, .dropdown-content {
+  font-size: clamp(1.1rem, 2vw, 2rem);
+}
+
+#fake-mouse-pointer {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 10000;
+}
+#fake-mouse-pointer::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 18px solid #fff;
+  border-top: 18px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: drop-shadow(1px 1px 2px #000a);
+}

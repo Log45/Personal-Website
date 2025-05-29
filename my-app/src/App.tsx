@@ -3,6 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 //import About from './components/About';
 //import Contact from './components/Contact';
 
@@ -13,6 +16,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/contact" Component={Contact} />
+          <Route path="/education" Component={Education} />
+          <Route path="/experience" Component={Experience} />
+          <Route path="/projects" Component={Projects} />
           {/* Add more routes as needed */}
         </Routes>
       </div>

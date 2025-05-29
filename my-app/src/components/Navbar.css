@@ -3,7 +3,9 @@
     display: flex; /* Use flexbox layout */
     align-items: center; /* Vertically center items */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-    font-size: calc(10px + 2vmin);
+    font-size: clamp(0.7rem, 2.2vw, 2rem); /* Slightly smaller min font size */
+    padding: 0.5em 0.8em; /* Reduce horizontal padding slightly */
+    overflow-x: auto; /* Allow horizontal scrolling if absolutely necessary */
   }
   
   .navbar-list {
@@ -11,18 +13,43 @@
     margin: 0;
     padding: 0;
     display: flex; /* Ensure horizontal layout */
+    width: 100%; /* Allow list to take full width */
+    justify-content: space-between; /* Distribute space more evenly */
+    align-items: center;
   }
   
   .navbar-list li {
-    margin-left: 20px;
+    margin: 0 0.5em; /* Use horizontal margin with em for scaling */
+    flex-shrink: 1; /* Allow list items to shrink */
+  }
+  
+  .navbar-list li:first-child {
+    margin-left: 0.5em; /* Ensure first item has margin */
+  }
+  
+  .navbar-list li:last-child {
+    margin-right: 0.5em; /* Ensure last item has margin */
   }
   
   .navbar-list li a {
     text-decoration: none;
     color: white;
+    background: #23272f;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding: 0.4em 0.6em; /* Adjust padding with em for scaling */
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.15s;
+    display: inline-block;
+    border: 1.5px solid transparent;
+    white-space: nowrap; /* Prevent text wrapping within button */
+    font-size: inherit; /* Inherit font size from parent */
   }
   
   .navbar-list li a:hover {
     color: #61dafb; /* Change link color on hover */
+    background: #181a1f;
+    box-shadow: 0 4px 16px rgba(97,218,251,0.18);
+    border: 1.5px solid #61dafb;
+    transform: translateY(-2px) scale(1.06);
   }
   
