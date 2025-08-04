@@ -116,9 +116,9 @@ const educationData: EducationEntry[] = [
         term: "Fall 2025",
         gpa: "TBD Term GPA",
         courses: [
+          "Database System Implementation*",
           "Foundations of Computer Vision*",
-          "Advanced Programming Skills: Design Patters & C#*",
-          "Computational Geometry (Waitlist)*",
+          "Computational Geometry*",
           "Advanced Databases: Graph Databases*",
           "Quantum Machine Learning*",
           "Japanese for Science & Technology"
