@@ -176,7 +176,7 @@ const Education: React.FC = () => {
                           <li>Advanced Certificate in Artificial Intelligence</li>
                           {/* <li>Advanced Certificate in Big Data Analytics</li> */}
                           <li>Minor in Japanese Language and Culture</li>
-                          <li>Cumulative GPA: 3.58</li>
+                          <li>Cumulative GPA: 3.61</li>
                         </ul>
                       </p>}
                   {edu.semesters.map((semester, i) => (
