@@ -105,7 +105,7 @@ const educationData: EducationEntry[] = [
       },
       {
         term: "Summer 2025",
-        gpa: "TBD Term GPA",
+        gpa: "3.89 Term GPA",
         courses: [
           "Introduction to Big Data*",
           "Programming Language Concepts",
